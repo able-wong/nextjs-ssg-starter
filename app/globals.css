@@ -1,0 +1,19 @@
+/* This is a working setup for importing Tailwind CSS v4 and DaisyUI */
+/* Please do not change */
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "daisyui";
+/* end of imports for tailwindcss and daisyui */
+
+/* Custom styles */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
