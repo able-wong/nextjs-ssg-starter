@@ -3,13 +3,25 @@
 export default function Home() {
   return (
     <main className="container mx-auto p-4">
-
-      <div className="hero min-h-[50vh] bg-base-200 rounded-box mb-8">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">Welcome to Next.js</h1>
-            <p className="py-6">This is a simple example of a Next.js site with DaisyUI components.</p>
-            <button className="btn btn-primary">Get Started</button>
+      {/* hero section */}
+      <div className="hero min-h-[70vh] bg-base-200 rounded-box mb-8">
+        <div className="hero-content flex-col lg:flex-row-reverse gap-8">
+          <div className="lg:w-1/2">
+            <img
+              src="/hero-image.svg"
+              alt="Hero illustration"
+              className="w-full h-auto max-w-lg rounded-lg shadow-2xl mx-auto transition-transform hover:scale-105"
+              width={512}
+              height={512}
+            />
+          </div>
+          <div className="lg:w-1/2">
+            <h1 className="text-5xl font-bold leading-tight">Build stunning static sites with Next.js</h1>
+            <p className="py-6 text-lg">Launch your next project faster with our modern stack featuring Next.js, Tailwind CSS, and DaisyUI. Perfect for static sites!</p>
+            <div className="flex gap-4">
+              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-outline">Learn More</button>
+            </div>
           </div>
         </div>
       </div>

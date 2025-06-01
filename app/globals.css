@@ -2,16 +2,26 @@
 /* Please do not change */
 @import "tailwindcss";
 @import "tw-animate-css";
-
-/*
-  Followings are setting default theme and dark theme.
-  Availabe themes can be found at https://daisyui.com/docs/themes/.
-  After you changed the themes, you should also update config/theme.ts file.
-*/
-@plugin "daisyui" {
-  themes: corporate --default, business --prefersdark;
-}
+@plugin "daisyui";
 /* End of imports for Tailwind CSS v4 and DaisyUI v5 */
+
+/* Color theme for DaisyUI v5 */
+/* Reference: https://daisyui.com/docs/themes/ "How to customize an existing theme?" section */
+@plugin "daisyui/theme" {
+  name: "light"; /* Start with "light" or "dark" based on theme preferences and customizations will apply to the selected theme */
+  default: true;
+  /* Uncomment the following lines to customize the theme colors for DaisyUI */
+  /*
+  --color-primary: oklch(45% 0.12 150);
+  --color-primary-content: oklch(98% 0.01 150);
+  --color-secondary: oklch(55% 0.15 150);
+  --color-secondary-content: oklch(98% 0.01 200);
+  --color-accent: oklch(75% 0.12 150);
+  --color-base-100: oklch(98% 0.02 150);
+  --color-base-200: oklch(95% 0.04 150);
+  --color-base-300: oklch(90% 0.06 150);
+  */
+}
 
 /* Custom styles */
 :root {

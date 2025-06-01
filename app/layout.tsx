@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import ThemeToggle from './components/ThemeToggle'
 
 export const metadata: Metadata = {
   title: 'Next.js Example',
@@ -12,13 +11,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // add data-theme attribute to html tag to force a specific theme on page load.
-  // by default (ie data-theme is not defined or empty), it will use one matching your system theme.
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light" className="scroll-smooth">
       <body>
         <div className="min-h-screen">
-          <ThemeToggle />
+          <div className="navbar bg-base-100 shadow-md">
+            <div className="flex-1">
+              <a className="btn btn-ghost normal-case text-xl">My App</a>
+            </div>
+            <div className="flex-none">
+              <ul className="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
           {children}
         </div>
       </body>
