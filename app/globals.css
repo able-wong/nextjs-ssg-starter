@@ -1,9 +1,17 @@
-/* This is a working setup for importing Tailwind CSS v4 and DaisyUI */
+/* This is a working setup for importing Tailwind CSS v4 and DaisyUI v5 */
 /* Please do not change */
 @import "tailwindcss";
 @import "tw-animate-css";
-@plugin "daisyui";
-/* end of imports for tailwindcss and daisyui */
+
+/*
+  Followings are setting default theme and dark theme.
+  Availabe themes can be found at https://daisyui.com/docs/themes/.
+  After you changed the themes, you should also update config/theme.ts file.
+*/
+@plugin "daisyui" {
+  themes: corporate --default, business --prefersdark;
+}
+/* End of imports for Tailwind CSS v4 and DaisyUI v5 */
 
 /* Custom styles */
 :root {

@@ -3,18 +3,6 @@
 export default function Home() {
   return (
     <main className="container mx-auto p-4">
-      {/* Theme Toggle */}
-      <div className="fixed top-4 right-4">
-        <button className="btn btn-circle btn-ghost" onClick={() => {
-          const html = document.documentElement;
-          const currentTheme = html.getAttribute('data-theme');
-          html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-        }}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-6 h-6 stroke-current">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-          </svg>
-        </button>
-      </div>
 
       <div className="hero min-h-[50vh] bg-base-200 rounded-box mb-8">
         <div className="hero-content text-center">
@@ -71,7 +59,7 @@ export default function Home() {
           <div className="stat-value text-primary">25.6K</div>
           <div className="stat-desc">21% more than last month</div>
         </div>
-        
+
         <div className="stat">
           <div className="stat-figure text-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -80,7 +68,7 @@ export default function Home() {
           <div className="stat-value text-secondary">2.6M</div>
           <div className="stat-desc">14% more than last month</div>
         </div>
-        
+
         <div className="stat">
           <div className="stat-figure text-secondary">
             <div className="avatar online">
